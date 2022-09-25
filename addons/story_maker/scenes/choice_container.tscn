@@ -1,0 +1,29 @@
+[gd_scene format=2]
+
+[node name="ChoiceContainer" type="VBoxContainer"]
+margin_top = 28.0
+margin_right = 318.0
+margin_bottom = 70.0
+
+[node name="ChoiceLabel" type="Label" parent="."]
+margin_right = 318.0
+margin_bottom = 14.0
+text = "1"
+
+[node name="ChoiceTextContainer" type="HBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 318.0
+margin_bottom = 42.0
+
+[node name="ChoiceTextLabel" type="Label" parent="ChoiceTextContainer"]
+margin_top = 5.0
+margin_right = 85.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 85, 0 )
+text = "Choice text:"
+
+[node name="LineEdit" type="LineEdit" parent="ChoiceTextContainer"]
+margin_left = 89.0
+margin_right = 318.0
+margin_bottom = 24.0
+size_flags_horizontal = 3

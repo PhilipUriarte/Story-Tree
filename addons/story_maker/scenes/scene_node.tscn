@@ -1,0 +1,117 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/story_maker/scenes/choice_container.tscn" type="PackedScene" id=1]
+
+[node name="SceneNode" type="GraphNode"]
+margin_left = 464.0
+margin_top = 206.0
+margin_right = 764.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 350, 350 )
+mouse_filter = 1
+title = "Scene"
+offset = Vector2( 100, 100 )
+show_close = true
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+
+[node name="MainMargin" type="MarginContainer" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 334.0
+margin_bottom = 366.0
+size_flags_vertical = 3
+custom_constants/margin_top = 10
+custom_constants/margin_bottom = 10
+
+[node name="MainContainer" type="VBoxContainer" parent="MainMargin"]
+margin_top = 10.0
+margin_right = 318.0
+margin_bottom = 332.0
+custom_constants/separation = 10
+
+[node name="SceneIdContainer" type="HBoxContainer" parent="MainMargin/MainContainer"]
+margin_right = 318.0
+margin_bottom = 24.0
+
+[node name="IdLabel" type="Label" parent="MainMargin/MainContainer/SceneIdContainer"]
+margin_top = 5.0
+margin_right = 90.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 90, 0 )
+text = "Scene ID:"
+
+[node name="IdEdit" type="LineEdit" parent="MainMargin/MainContainer/SceneIdContainer"]
+margin_left = 94.0
+margin_right = 318.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+max_length = 30
+
+[node name="HeaderContainer" type="HBoxContainer" parent="MainMargin/MainContainer"]
+margin_top = 34.0
+margin_right = 318.0
+margin_bottom = 58.0
+
+[node name="HeaderLabel" type="Label" parent="MainMargin/MainContainer/HeaderContainer"]
+margin_top = 5.0
+margin_right = 85.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 85, 0 )
+text = "Header text:"
+
+[node name="HeaderEdit" type="LineEdit" parent="MainMargin/MainContainer/HeaderContainer"]
+margin_left = 89.0
+margin_right = 318.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+max_length = 30
+
+[node name="StoryTextContainer" type="VBoxContainer" parent="MainMargin/MainContainer"]
+margin_top = 68.0
+margin_right = 318.0
+margin_bottom = 242.0
+custom_constants/separation = 10
+
+[node name="StoryLabel" type="Label" parent="MainMargin/MainContainer/StoryTextContainer"]
+margin_right = 318.0
+margin_bottom = 14.0
+text = "Story text:"
+
+[node name="StoryEdit" type="TextEdit" parent="MainMargin/MainContainer/StoryTextContainer"]
+margin_top = 24.0
+margin_right = 318.0
+margin_bottom = 174.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_vertical = 3
+smooth_scrolling = true
+wrap_enabled = true
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="MainMargin/MainContainer"]
+margin_top = 252.0
+margin_right = 318.0
+margin_bottom = 322.0
+
+[node name="ChoicesTopContainer" type="HBoxContainer" parent="MainMargin/MainContainer/ChoicesContainer"]
+margin_right = 318.0
+margin_bottom = 24.0
+
+[node name="ChoicesLabel" type="Label" parent="MainMargin/MainContainer/ChoicesContainer/ChoicesTopContainer"]
+margin_top = 5.0
+margin_right = 230.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Choices:"
+
+[node name="AddChoiceButton" type="Button" parent="MainMargin/MainContainer/ChoicesContainer/ChoicesTopContainer"]
+margin_left = 234.0
+margin_right = 318.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 24 )
+text = "Add Choice"
+
+[node name="ChoiceContainer" parent="MainMargin/MainContainer/ChoicesContainer" instance=ExtResource( 1 )]
