@@ -2,6 +2,7 @@ tool
 extends EditorPlugin
 
 const EDITOR_SCREEN = preload("res://addons/story_tree/scenes/editor_screen.tscn")
+const EDITOR_ICON = preload("res://addons/story_tree/story-tree-icon.png")
 
 var editor_screen_instance
 
@@ -35,4 +36,4 @@ func get_plugin_name():
 
 
 func get_plugin_icon():
-	return get_editor_interface().get_base_control().get_icon("GraphEdit", "EditorIcons")
+	return EDITOR_ICON
